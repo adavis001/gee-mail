@@ -7,34 +7,43 @@
 <script>
   
   for (var i = 0; i<geemails.length; i++){
-console.log(geemails);
-console.log(geemails.length);
-console.log(geemails[i]);
+// console.log(geemails);
+// console.log(geemails.length);
+// console.log(geemails[i]);
+// console.log(geemails[i].sender);
+//console.log(geemails[i].subject);
+//console.log(geemails[i].body);
+
+
+var emailSubject = document.createElement("div");
+emailSubject.classId = "subject";
+emailSubject.innerHTML = geemails[i].subject;
+document.body.appendChild(emailSubject);
+
+var emailSender = document.createElement("div");
+emailSender.classId = "sender";
+emailSender.innerHTML = geemails[i].sender;
+document.body.appendChild(emailSender);
+
+var emailDate =document.createElement("div");
+emailDate.classId = "date";
+emailDate.innerHTML = geemails[i].date;
+document.body.appendChild(emailDate);
+
+var emailBody = document.createElement("div");
+emailBody.classId = "body";
+emailBody.innerHTML = geemails[i].body;
+document.body.appendChild(emailBody);
+
 }
-
-
 
 
 </script>
 
 
 
-
 	</head>
 	<body>
-		<div class="header" id="top">
-			<h1>Welcome to gg mail!  You have mail!</h1>
-
-		</div>
-    <div class="main" id="emailCounter">
-      <p>You have mail!</p>
-    </div>
-  
-  <div class="emailContainer" id="inbox"></div>
-    <p></p>
-  <div></div>
-  <div></div>
-
 
 	</body>
 </html>
