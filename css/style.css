@@ -26,6 +26,12 @@ display: none;
   color: red;
 }
 
+.eButton{
+  height: 200px
+  width: 100px;
+  color: black;
+}
+
 #top{
   background-color: black;
   color: red;

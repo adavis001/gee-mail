@@ -60,6 +60,10 @@ emailTime.classId = "date";
 emailTime.innerHTML = geemails[i].date;
 emailDate.appendChild(emailTime);
 
+//Create button to show e-mail
+var emailButton = document.createElement("button");
+emailButton.className = "ebutton";
+emailDate.appendChild(emailButton);
 
 //container for email
 var emailContainer = document.createElement("div");
@@ -74,17 +78,20 @@ emailBody.innerHTML = geemails[i].body;
 emailContainer.appendChild(emailBody);
 
 }
+// nameBox.addEventListener("click", toggle);
 
-//attempting toggle for messages.
-function toggle(){
-var toggleElement =document.getElementById("inbox");
-if(toggleElement.style.display === "none"){
-  toggleElement.style.display = "initial";
-}else{
-  toggleElement.style.display ="none";
-}
+// // attempting toggle for messages.  Need buttons first?
 
-}
+// function toggle(){
+// var toggleElement =document.getElementById("inbox");
+// if(toggleElement.style.display === "none"){
+//   toggleElement.style.display = "initial";
+// }else{
+//   toggleElement.style.display ="none";
+// }
+// }
+
+
 
 </script>
 
