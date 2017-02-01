@@ -1,11 +1,23 @@
 <html>
 	<head>
   <title>GG Mail</title>
-  <div class="header" id = "top">gg Mail</div>
+  <div class="header" id = "top"0>
+  <h1>gg Mail!</h1></div>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 <script>
-  
+
+//Creating E-mail Counter
+var emailCounter = document.createElement("div");
+emailCounter.className = "counter";
+document.body.appendChild(emailCounter);
+var emailCount = document.createElement("div");
+emailCount.className = "count";
+emailCount.innerHTML = "Emails: " + geemails.length;
+emailCounter.appendChild(emailCount);
+ 
+
+ //Creating E-mail inbox and the emails to put into it. 
   for (var i = 0; i<geemails.length; i++){
 // console.log(geemails);
 // console.log(geemails.length);
@@ -15,28 +27,64 @@
 //console.log(geemails[i].body);
 
 
-var emailSubject = document.createElement("div");
-emailSubject.classId = "subject";
-emailSubject.innerHTML = geemails[i].subject;
-document.body.appendChild(emailSubject);
+//container for sender
+var senderContainer = document.createElement("div");
+senderContainer.className = "nameBox";
+document.body.appendChild(senderContainer);
 
+//put sender in nameBox
 var emailSender = document.createElement("div");
-emailSender.classId = "sender";
+emailSender.className = "sender";
 emailSender.innerHTML = geemails[i].sender;
-document.body.appendChild(emailSender);
+senderContainer.appendChild(emailSender);
 
-var emailDate =document.createElement("div");
-emailDate.classId = "date";
-emailDate.innerHTML = geemails[i].date;
+//container for subject
+var subjectContainer = document.createElement("div");
+subjectContainer.className = "subjectBox";
+document.body.appendChild(subjectContainer);
+
+//put subject in subjectBox
+var emailSubject = document.createElement("div");
+emailSubject.className = "subject";
+emailSubject.innerHTML = geemails[i].subject;
+subjectContainer.appendChild(emailSubject);
+
+//container for date
+var emailDate = document.createElement("div");
+emailDate.className = "dateBox";
 document.body.appendChild(emailDate);
 
+//put date in dateBox
+var emailTime =document.createElement("div");
+emailTime.classId = "date";
+emailTime.innerHTML = geemails[i].date;
+emailDate.appendChild(emailTime);
+
+
+//container for email
+var emailContainer = document.createElement("div");
+emailContainer.className = "inbox";
+document.body.appendChild(emailContainer);
+
+
+//put email messages inside inbox
 var emailBody = document.createElement("div");
-emailBody.classId = "body";
+emailBody.classId = "message";
 emailBody.innerHTML = geemails[i].body;
-document.body.appendChild(emailBody);
+emailContainer.appendChild(emailBody);
 
 }
 
+//attempting toggle for messages.
+function toggle(){
+var toggleElement =document.getElementById("inbox");
+if(toggleElement.style.display === "none"){
+  toggleElement.style.display = "initial";
+}else{
+  toggleElement.style.display ="none";
+}
+
+}
 
 </script>
 

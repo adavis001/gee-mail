@@ -3,16 +3,36 @@ background-color: white;
 color: red;
 }
 
+.message{
+display: none;
+}
+
+
+
+.nameBox{
+  color: blue;
+}
+
+.subjectBox{
+  color: purple;
+}
+
+.dateBox{
+  color: green;
+}
+
+.inbox{
+  display: none;
+  color: red;
+}
+
 #top{
   background-color: black;
+  color: red;
 }
 
-#main{
-background-color: yellow;
-color: blue;
-}
 
-#emailCounter{
+#counter{
   background-color: blue;
   height:250px;
 }
