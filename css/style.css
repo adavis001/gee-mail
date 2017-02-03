@@ -7,7 +7,10 @@ color: red;
 display: none;
 }
 
-
+#gg{
+  width: 50px;
+  height: 50px;
+}
 
 .nameBox{
   color: blue;
@@ -17,23 +20,33 @@ display: none;
   color: purple;
 }
 
-.dateBox{
+.emailBox{
   color: green;
+  margin-bottom: 10px;
+  border: 1px solid black
 }
 
-.inbox{
-  display: none;
-  color: red;
+.emailSubject{
+  color: ;
 }
-
 .eButton{
   height: 200px
   width: 100px;
   color: black;
 }
 
+.dateMe{
+  color: black;
+}
+
+
+
+.emailBody{
+  color: black;
+}
+
+
 #top{
-  background-color: black;
   color: red;
 }
 

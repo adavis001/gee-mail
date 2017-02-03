@@ -2,14 +2,17 @@
 	<head>
   <title>GG Mail</title>
   <div class="header" id = "top"0>
-  <h1>gg Mail!</h1></div>
+  <header>
+    <img  id= "gg" src="images/gg.png" alt="">
+  </header>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 <script>
+window.onload = function (){
 
-//Creating E-mail Counter
+
 var emailCounter = document.createElement("div");
-emailCounter.className = "counter";
+emailCounter.className = "counter"; 
 document.body.appendChild(emailCounter);
 var emailCount = document.createElement("div");
 emailCount.className = "count";
@@ -25,6 +28,7 @@ emailCounter.appendChild(emailCount);
 // console.log(geemails[i].sender);
 //console.log(geemails[i].subject);
 //console.log(geemails[i].body);
+//Creating E-mail Counter
 
 
 //container for sender
@@ -48,48 +52,58 @@ var emailSubject = document.createElement("div");
 emailSubject.className = "subject";
 emailSubject.innerHTML = geemails[i].subject;
 subjectContainer.appendChild(emailSubject);
+  
 
-//container for date
-var emailDate = document.createElement("div");
-emailDate.className = "dateBox";
-document.body.appendChild(emailDate);
+//container for date/button/message
+var emailInbox = document.createElement("div");
+emailInbox.className = "emailBox";
+document.body.appendChild(emailInbox);
+
+
+//Create button to show e-mail.  Put it in emailInbox
+var emailButton = document.createElement("button");
+emailButton.className = "eButton";
+emailButton.innerHTML = "Click Me!";
+emailInbox.appendChild(emailButton);
+
+//Container for date(within Inbox).
+var dateBox=  document.createElement("div");
+dateBox.className = "dateMe";
+emailInbox.appendChild(dateBox);
 
 //put date in dateBox
 var emailTime =document.createElement("div");
-emailTime.classId = "date";
+emailTime.className = "date";
 emailTime.innerHTML = geemails[i].date;
-emailDate.appendChild(emailTime);
+dateBox.appendChild(emailTime);
 
-//Create button to show e-mail
-var emailButton = document.createElement("button");
-emailButton.className = "ebutton";
-emailDate.appendChild(emailButton);
+//container for message(within Inbox)
+var bodyBag = document.createElement("div");
+bodyBag.className = "bodyHolder";
+emailInbox.appendChild(bodyBag);
 
-//container for email
-var emailContainer = document.createElement("div");
-emailContainer.className = "inbox";
-document.body.appendChild(emailContainer);
-
-
-//put email messages inside inbox
+//put 'em in a body bag!
 var emailBody = document.createElement("div");
-emailBody.classId = "message";
+emailBody.className = "message";
 emailBody.innerHTML = geemails[i].body;
-emailContainer.appendChild(emailBody);
+bodyBag.appendChild(emailBody);
+
+
 
 }
-// nameBox.addEventListener("click", toggle);
 
-// // attempting toggle for messages.  Need buttons first?
 
-// function toggle(){
-// var toggleElement =document.getElementById("inbox");
-// if(toggleElement.style.display === "none"){
-//   toggleElement.style.display = "initial";
-// }else{
-//   toggleElement.style.display ="none";
-// }
-// }
+//eButton.addEventListener("click", toggle);
+
+function toggle(){
+var toggleElement =document.getElementById("inbox");
+if(toggleElement.style.display === "none"){
+  toggleElement.style.display = "initial";
+}else{
+  toggleElement.style.display ="none";
+}
+}
+};
 
 
 
@@ -97,8 +111,11 @@ emailContainer.appendChild(emailBody);
 
 
 
-	</head>
-	<body>
+  </head>
+  <body>
 
-	</body>
+
+
+
+  </body>
 </html>
