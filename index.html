@@ -94,17 +94,6 @@ bodyBag.appendChild(emailBody);
 
 emailButton.addEventListener("click", toggle);
 
-}
-
-
-// function showMenu(){
-// var getMenu = this.querySelectorAll(".menu")[0];
-// if(getMenu.style.display === "none"){
-//   getMenu.style.display = "initial";
-// }else{
-//   getMenu.style.display = "none";
-//   }
-// }
 
 function toggle(){
 var toggleElement = document.querySelectorAll(".messageBody")[0];
@@ -112,14 +101,25 @@ if (toggleElement.style.display === "none") {
   toggleElement.style.display = "initial";
 }else{
   toggleElement.style.display ="none";
+  }
 }
 }
+
 };
 
-// var emailGenerator = setInterval(function(){newEmail()}, 5000);
+setInterval(newMail,5000);
 
-// function newEmail(){}
+function newMail(){
+var newSenderContainer = document.createElement("div");
+newSenderContainer.className = "newNameBox";
+newSenderContainer.innerHTML = geemails[Math.floor(Math.random ()*10)].sender;
+document.body.appendChild(newSenderContainer);
+var newEmailSender = document.createElement("div");
+newEmailSender.className = "newSender";
+newEmailSender.innerHTML = geemails[Math.floor(Math.random ()*10)].sender;
+newSenderContainer.appendChild(newEmailSender);
 
+}
 
 </script>
 
