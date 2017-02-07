@@ -3,9 +3,6 @@ background-color: white;
 color: red;
 }
 
-.message{
-display: none;
-}
 
 #gg{
   width: 50px;
@@ -23,15 +20,15 @@ display: none;
 .emailBox{
   color: green;
   margin-bottom: 10px;
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 .emailSubject{
   color: ;
 }
 .eButton{
-  height: 200px
-  width: 100px;
+  height: 50px;
+  width: 75px;
   color: black;
 }
 
@@ -39,7 +36,7 @@ display: none;
   color: black;
 }
 
-
+  
 
 .emailBody{
   color: black;
@@ -55,3 +52,13 @@ display: none;
   background-color: blue;
   height:250px;
 }
+
+.messageBody{
+color: black;
+display: none;
+}
+
+.bodyBag{
+  background-color: purple;
+}
+

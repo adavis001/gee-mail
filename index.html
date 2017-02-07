@@ -60,11 +60,6 @@ emailInbox.className = "emailBox";
 document.body.appendChild(emailInbox);
 
 
-//Create button to show e-mail.  Put it in emailInbox
-var emailButton = document.createElement("button");
-emailButton.className = "eButton";
-emailButton.innerHTML = "Click Me!";
-emailInbox.appendChild(emailButton);
 
 //Container for date(within Inbox).
 var dateBox=  document.createElement("div");
@@ -82,22 +77,38 @@ var bodyBag = document.createElement("div");
 bodyBag.className = "bodyHolder";
 emailInbox.appendChild(bodyBag);
 
+//Create button to show e-mail.  Put it in emailInbox
+var emailButton = document.createElement("button");
+emailButton.className = "eButton";
+emailButton.innerHTML = "Click Me!";
+emailInbox.appendChild(emailButton);
+
 //put 'em in a body bag!
 var emailBody = document.createElement("div");
-emailBody.className = "message";
+emailBody.className = "messageBody";
 emailBody.innerHTML = geemails[i].body;
 bodyBag.appendChild(emailBody);
 
 
 
+
+emailButton.addEventListener("click", toggle);
+
 }
 
 
-//eButton.addEventListener("click", toggle);
+// function showMenu(){
+// var getMenu = this.querySelectorAll(".menu")[0];
+// if(getMenu.style.display === "none"){
+//   getMenu.style.display = "initial";
+// }else{
+//   getMenu.style.display = "none";
+//   }
+// }
 
 function toggle(){
-var toggleElement =document.getElementById("inbox");
-if(toggleElement.style.display === "none"){
+var toggleElement = document.querySelectorAll(".messageBody")[0];
+if (toggleElement.style.display === "none") {
   toggleElement.style.display = "initial";
 }else{
   toggleElement.style.display ="none";
@@ -105,6 +116,9 @@ if(toggleElement.style.display === "none"){
 }
 };
 
+// var emailGenerator = setInterval(function(){newEmail()}, 5000);
+
+// function newEmail(){}
 
 
 </script>
