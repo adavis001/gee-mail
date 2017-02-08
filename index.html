@@ -77,11 +77,6 @@ var bodyBag = document.createElement("div");
 bodyBag.className = "bodyHolder";
 emailInbox.appendChild(bodyBag);
 
-//Create button to show e-mail.  Put it in emailInbox
-var emailButton = document.createElement("button");
-emailButton.className = "eButton";
-emailButton.innerHTML = "Click Me!";
-emailInbox.appendChild(emailButton);
 
 //put 'em in a body bag!
 var emailBody = document.createElement("div");
@@ -89,6 +84,11 @@ emailBody.className = "messageBody";
 emailBody.innerHTML = geemails[i].body;
 bodyBag.appendChild(emailBody);
 
+//Create button to show e-mail.  Put it in emailInbox
+var emailButton = document.createElement("button");
+emailButton.className = "eButton";
+emailButton.innerHTML = "Click Me!";
+emailInbox.appendChild(emailButton);
 
 
 
@@ -100,7 +100,7 @@ var toggleElement = document.querySelectorAll(".messageBody")[0];
 if (toggleElement.style.display === "none") {
   toggleElement.style.display = "initial";
 }else{
-  toggleElement.style.display ="none";
+  toggleElement.style.display ="none";  
   }
 }
 }
@@ -110,16 +110,57 @@ if (toggleElement.style.display === "none") {
 setInterval(newMail,5000);
 
 function newMail(){
+  //Add new sender for new email.
 var newSenderContainer = document.createElement("div");
 newSenderContainer.className = "newNameBox";
-newSenderContainer.innerHTML = geemails[Math.floor(Math.random ()*10)].sender;
 document.body.appendChild(newSenderContainer);
 var newEmailSender = document.createElement("div");
 newEmailSender.className = "newSender";
 newEmailSender.innerHTML = geemails[Math.floor(Math.random ()*10)].sender;
 newSenderContainer.appendChild(newEmailSender);
 
+//Add new subject for new email
+var newSubjectContainer = document.createElement("div");
+newSubjectContainer.className = "newSubjectBox";
+document.body.appendChild(newSubjectContainer);
+var newEmailSubject = document.createElement("div");
+newEmailSubject.className = "newSubject";
+newEmailSubject.innerHTML = geemails[Math.floor(Math.random ()*10)].subject;
+newSubjectContainer.appendChild(newEmailSubject);
+
+//Add new Inbox.  New Date and Body will be placed inside later.
+var newEmailInbox = document.createElement("div");
+newEmailInbox.className = "newEmailBox";
+document.body.appendChild(newEmailInbox);
+
+//Add new date
+var newDateBox=  document.createElement("div");
+newDateBox.className = "newDateMe";
+newEmailInbox.appendChild(newDateBox);
+var newEmailTime =document.createElement("div");
+newEmailTime.className = "newDate";
+newEmailTime.innerHTML = geemails[Math.floor(Math.random ()*10)].date;
+newDateBox.appendChild(newEmailTime);
+
+//Add new email message
+var newBodyBag = document.createElement("div");
+newBodyBag.className = "newBodyHolder";
+newEmailInbox.appendChild(newBodyBag);
+var newEmailBody = document.createElement("div");
+newEmailBody.className = "newMessageBody";
+newEmailBody.innerHTML = geemails[Math.floor(Math.random ()*10)].body;
+newBodyBag.appendChild(newEmailBody);
+
+//Add new button
+var emailButton = document.createElement("button");
+emailButton.className = "eButton";
+emailButton.innerHTML = "Click Me!";
+newEmailInbox.appendChild(emailButton);
+
+
+
 }
+
 
 </script>
 

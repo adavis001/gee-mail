@@ -12,12 +12,22 @@ color: red;
 .nameBox{
   color: blue;
 }
-
+.newNameBox{
+  color: blue;
+}
 .subjectBox{
+  color: purple;
+}
+.newSubjectBox{
   color: purple;
 }
 
 .emailBox{
+  color: green;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+.newEmailBox{
   color: green;
   margin-bottom: 10px;
   border: 1px solid black;
@@ -35,8 +45,9 @@ color: red;
 .dateMe{
   color: black;
 }
-
-  
+.newDateMe{
+  color: black;
+}
 
 .emailBody{
   color: black;
@@ -56,6 +67,10 @@ color: red;
 .messageBody{
 color: black;
 display: none;
+}
+.newMessageBody{
+  color: black;
+  display: none;
 }
 
 .bodyBag{
