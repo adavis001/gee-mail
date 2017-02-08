@@ -63,17 +63,3 @@ color: red;
   background-color: blue;
   height:250px;
 }
-
-.messageBody{
-color: black;
-display: none;
-}
-.newMessageBody{
-  color: black;
-  display: none;
-}
-
-.bodyBag{
-  background-color: purple;
-}
-
