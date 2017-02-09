@@ -14,8 +14,9 @@ var emailCounter = document.createElement("div");
 emailCounter.className = "counter"; 
 document.body.appendChild(emailCounter);
 var emailCount = document.createElement("div");
+var geemailCount = geemails.length;
 emailCount.className = "count";
-emailCount.innerHTML = "Emails: " + geemails.length;
+emailCount.innerHTML = "Emails: " + geemailCount;
 emailCounter.appendChild(emailCount);
  
 
@@ -97,7 +98,8 @@ setInterval(newMail,5000);
 
 
 function newMail(){
-  emailCounter++;
+  geemailCount++;
+  emailCount.innerHTML = "Emails: " + geemailCount;
 //container for sender
 var senderContainer = document.createElement("div");
 senderContainer.className = "nameBox";
@@ -156,7 +158,7 @@ showNew[z].addEventListener ("click", toggle);
   }
 
 function toggleMore() { 
-
+emails.length++;
  var getMessage = this.querySelectorAll(".messageBody")[0];
 
  if (getMessage.style.display === "none"){
