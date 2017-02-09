@@ -91,7 +91,7 @@ function toggle() {
 }else {
    getMessage.style.display = "none";
   }
-
+}
 
 setInterval(newMail,5000);
 
@@ -148,13 +148,23 @@ emailBody.className = "messageBody";
 emailBody.innerHTML = geemails[Math.floor(Math.random ()*10)].body;
 emailInbox.appendChild(emailBody);
 emailBody.style.display = "none";
+
+var showNew = document.getElementsByClassName("emailBox");
+for (var z=0; z<showNew.length; z++){
+showNew[z].addEventListener ("click", toggle);
+}
+  }
+
+function toggleMore() { 
+
+ var getMessage = this.querySelectorAll(".messageBody")[0];
+
+ if (getMessage.style.display === "none"){
+ getMessage.style.display = "block";
+}else {
+   getMessage.style.display = "none";
   }
 }
-
-
-
-
-
 };
 
 </script>

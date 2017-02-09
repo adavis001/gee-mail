@@ -12,26 +12,18 @@ color: red;
 .nameBox{
   color: blue;
 }
-.newNameBox{
-  color: blue;
-}
+
 .subjectBox{
   color: purple;
 }
-.newSubjectBox{
-  color: purple;
-}
+
 
 .emailBox{
   color: green;
   margin-bottom: 10px;
   border: 1px solid black;
 }
-.newEmailBox{
-  color: green;
-  margin-bottom: 10px;
-  border: 1px solid black;
-}
+
 
 .emailSubject{
   color: ;
@@ -43,9 +35,6 @@ color: red;
 }
 
 .dateMe{
-  color: black;
-}
-.newDateMe{
   color: black;
 }
 
