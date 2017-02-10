@@ -7,14 +7,7 @@
 window.onload = function (){
 
 
-var emailCounter = document.createElement("div");
-emailCounter.className = "counter"; 
-document.body.appendChild(emailCounter);
-var emailCount = document.createElement("div");
-var geemailCount = geemails.length;
-emailCount.className = "count";
-emailCount.innerHTML = "Emails: " + geemailCount;
-emailCounter.appendChild(emailCount);
+
 
 var parentBox = document.createElement("div");
 parentBox.className = "bigBox";
@@ -95,8 +88,6 @@ function toggle() {
   }
 }
 
-setInterval(newMail,5000);
-
 
 function newMail(){
   geemailCount++;
@@ -168,6 +159,17 @@ emails.length++;
    getMessage.style.display = "none";
   }
 }
+
+var emailCounter = document.createElement("div");
+emailCounter.className = "counter"; 
+document.body.appendChild(emailCounter);
+var emailCount = document.createElement("div");
+var geemailCount = geemails.length;
+emailCount.className = "count";
+emailCount.innerHTML = "Emails: " + geemailCount;
+emailCounter.appendChild(emailCount);
+setInterval(newMail,5000);
+
 };
 
 </script>
