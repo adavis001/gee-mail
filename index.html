@@ -90,8 +90,6 @@ function toggle() {
 
 
 function newMail(){
-  geemailCount++;
-  emailCount.innerHTML = "Emails: " + geemailCount;
 //container for sender
 var senderContainer = document.createElement("div");
 senderContainer.className = "nameBox";
@@ -142,6 +140,8 @@ emailBody.className = "messageBody";
 emailBody.innerHTML = geemails[Math.floor(Math.random ()*10)].body;
 emailInbox.appendChild(emailBody);
 emailBody.style.display = "none";
+geemailCount++;
+  emailCount.innerHTML = "Emails: " + geemailCount;
 
 var showNew = document.getElementsByClassName("emailBox");
 for (var z=0; z<showNew.length; z++){
@@ -150,7 +150,6 @@ showNew[z].addEventListener ("click", toggle);
   }
 
 function toggleMore() { 
-emails.length++;
  var getMessage = this.querySelectorAll(".messageBody")[0];
 
  if (getMessage.style.display === "none"){
