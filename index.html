@@ -15,7 +15,11 @@ var geemailCount = geemails.length;
 emailCount.className = "count";
 emailCount.innerHTML = "Emails: " + geemailCount;
 emailCounter.appendChild(emailCount);
- 
+
+var parentBox = document.createElement("div");
+parentBox.className = "bigBox";
+document.body.appendChild(parentBox);
+
 
  //Creating E-mail inbox and the emails to put into it. 
   for (var i = 0; i<geemails.length; i++){
@@ -24,7 +28,7 @@ emailCounter.appendChild(emailCount);
 //container for sender
 var senderContainer = document.createElement("div");
 senderContainer.className = "nameBox";
-document.body.appendChild(senderContainer);
+parentBox.appendChild(senderContainer);
 
 //put sender in nameBox
 var emailSender = document.createElement("div");
@@ -35,7 +39,7 @@ senderContainer.appendChild(emailSender);
 //container for subject
 var subjectContainer = document.createElement("div");
 subjectContainer.className = "subjectBox";
-document.body.appendChild(subjectContainer);
+parentBox.appendChild(subjectContainer);
 
 //put subject in subjectBox
 var emailSubject = document.createElement("div");
@@ -47,7 +51,7 @@ subjectContainer.appendChild(emailSubject);
 //container for date/button/message
 var emailInbox = document.createElement("div");
 emailInbox.className = "emailBox";
-document.body.appendChild(emailInbox);
+parentBox.appendChild(emailInbox);
 
 
 //Container for date(within Inbox).
@@ -100,7 +104,7 @@ function newMail(){
 //container for sender
 var senderContainer = document.createElement("div");
 senderContainer.className = "nameBox";
-document.body.appendChild(senderContainer);
+parentBox.appendChild(senderContainer);
 
 //put sender in nameBox
 var emailSender = document.createElement("div");
@@ -111,7 +115,7 @@ senderContainer.appendChild(emailSender);
 //container for subject
 var subjectContainer = document.createElement("div");
 subjectContainer.className = "subjectBox";
-document.body.appendChild(subjectContainer);
+parentBox.appendChild(subjectContainer);
 
 //put subject in subjectBox
 var emailSubject = document.createElement("div");
@@ -123,7 +127,7 @@ subjectContainer.appendChild(emailSubject);
 //container for date/button/message
 var emailInbox = document.createElement("div");
 emailInbox.className = "emailBox";
-document.body.appendChild(emailInbox);
+parentBox.appendChild(emailInbox);
 
 
 //Container for date(within Inbox).

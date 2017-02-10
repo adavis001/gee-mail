@@ -1,8 +1,6 @@
 
 body {
-    width: 600px;
-    height: 50px;
-    font: 75%/1.4 verdana,Helvetica,sans-serif;
+    width: 825px;
     text-align: center;
     background-color: black;
     background-fill: auto;
@@ -11,13 +9,14 @@ body {
     background-attachment: fixed;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
-    clip: top;
+    margin-top: 10%
 }
 
-
-head{
-  text-align: fixed;
+.bigBox{
+height: 400px;
+width: 825px;
+overflow: scroll;
+scroll-behavior: hidden;
 }
 
 .nameBox{
@@ -35,25 +34,25 @@ head{
 }
 
 .emailBox{
-  color: green;
+  color: white;
   margin-bottom: 10px;
-  border: 1px dotted green;
+  border: 1px dotted white;
 }
 
 .emailBox{
 
 }
 .emailSubject{
-  color: green;
+  color: white;
 }
 
 
 .dateMe{
-  color: green;
+  color: white;
 }
 
 .emailBody{
-  color: green;
+  color: white;
   vertical-align: 50%;
 }
 
